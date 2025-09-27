@@ -1,0 +1,176 @@
+% (c) 2005 Lukasz Grzegorz Maciak
+
+% this is a template I use for my exam papers
+
+\documentclass[a4paper,10pt]{article}
+
+\setlength{\textheight}{10in}
+\setlength{\textwidth}{6.5in}
+\setlength{\topmargin}{-0.125in}
+\setlength{\oddsidemargin}{-.2in}
+\setlength{\evensidemargin}{-.2in}
+\setlength{\headsep}{0.2in}
+\setlength{\footskip}{0pt}
+
+%\usepackage{fontspec}
+\usepackage{amsmath}
+%\usepackage{unicode-math}
+%\setmathfont{texgyrepagella-math.otf}
+%\setmathfont{latinmodern-math.otf}
+%\setmathfont{xits-math.otf}
+%\setmathfont{Asana-Math.otf}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+%\usepackage{amssymb}
+%\usepackage{bm}
+%\usepackage{graphicx}
+%\usepackage{stmaryrd}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks   = true, %Colours links instead of ugly boxes
+	urlcolor     = blue, %Colour for external hyperlinks
+	linkcolor    = red, %Colour of internal links
+	citecolor   = red %Colour of citations
+}
+\usepackage{graphicx}
+\usepackage{listings}
+
+\pagestyle{fancy}
+%\renewcommand{\footrulewidth}{0.4pt}
+
+\lhead{\textbf{Name:} \rule{5.5cm}{0.5pt}}
+%\chead{M.Number: \rule{2cm}{0.5pt}}
+\chead{\textbf{Homework 2}}
+\rhead{\textbf{Fundamentals of CS \& Programming}}
+\fancyfoot{}
+%\newcommand{\bigbrk}{\vspace*{2in}}
+%\newcommand{\smallbrk}{\vspace*{.3in}}
+
+\begin{document}
+
+\section*{1. Propositions}
+Which of the following sentences are propositions? What are the truth values of those that are propositions?
+
+\begin{enumerate}
+  \item Boston is the capital of Massachusetts.
+  \item Berlin is the capital of Austria.
+  \item $2 + 3 = 5$.
+  \item $5 + 7 = 10$.
+  \item $x + 2 = 11$.
+  \item Answer this question.
+  \item $x + y = y + x$ for every pair of real numbers $x$ and $y$.
+\end{enumerate}
+
+\newpage
+\mbox{} 
+
+\newpage
+\mbox{}
+
+\section*{2. Propositions as English sentences}
+Let $p$, $q$, and $r$ be the propositions:
+\[
+\begin{aligned}
+p&:\ \text{You have the flu.} \\
+q&:\ \text{You miss the final examination.} \\
+r&:\ \text{You pass the course.}
+\end{aligned}
+\]
+
+Express each of the following propositions as an English sentence.
+\begin{enumerate}
+  \item $p \to q$
+  \item $\bar{q} \leftrightarrow r$
+  \item $q \to \bar{r}$
+  \item $p \lor q \lor r$
+  \item $(p \to \bar{r}) \lor (q \to \bar{r})$
+  \item $(p \land q) \lor (\bar{q} \land r)$
+\end{enumerate}
+
+\newpage
+\mbox{} 
+
+\newpage
+\mbox{}
+
+\section*{3. Truth tables}
+Construct a truth table for each of the following compound propositions.
+
+\begin{enumerate}
+  \item $(p \lor \bar{q}) \to q$
+  \item $p \oplus p$
+  \item $(p \oplus q) \lor (p \oplus \bar{q})$
+  \item $p \to \bar{q}$
+  \item $(p \leftrightarrow q) \lor (\bar{p} \leftrightarrow q)$
+\end{enumerate}
+
+\newpage
+\mbox{} 
+
+\newpage
+\mbox{}
+
+\section*{4. Logical puzzle}
+This puzzle can be solved by translating statements into logical expressions and reasoning from these expressions using truth tables:
+
+Four friends have been identified as suspects for an unauthorized access into a computer system. They have made statements to the investigating authorities.
+
+\begin{itemize}
+  \item Alice said ``Carlos did it.''
+  \item John said ``I did not do it.''
+  \item Carlos said ``Diana did it.''
+  \item Diana said ``Carlos lied when he said that I did it.''
+\end{itemize}
+
+\begin{enumerate}
+  \item If the authorities also knew that exactly one of the four suspects is telling the truth, who did it? Explain your reasoning.
+  \item If the authorities also know that exactly one is lying, who did it? Explain your reasoning.
+\end{enumerate}
+
+
+\newpage
+\mbox{} 
+
+\newpage
+\mbox{}
+
+\section*{5. Tautology with truth table}
+Show that each of the following implications is a tautology by using truth tables.
+
+\begin{enumerate}
+  \item $(\bar{p} \land (p \lor q)) \to q$
+  \item $((p \to q) \land (q \to r)) \to (p \to r)$
+  \item $(p \land (p \to q)) \to q$
+  \item $((p \lor q) \land (p \to r) \land (q \to r)) \to r$
+\end{enumerate}
+
+\newpage
+\mbox{} 
+
+\newpage
+\mbox{}
+
+\section*{6. Tautology with laws of logic}
+Show that each implication from the previous example is a tautology without using truth tables.
+
+\newpage
+\mbox{} 
+
+\newpage
+\mbox{}
+
+\section*{7. Logical equivalence}
+Show that $\overline{p \oplus q}$ and $p \leftrightarrow q$ are logically equivalent.
+
+
+
+\newpage
+\mbox{} 
+
+\newpage
+\mbox{} 
+\end{document}
+
+
+
+
