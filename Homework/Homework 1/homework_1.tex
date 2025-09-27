@@ -1,0 +1,140 @@
+% (c) 2005 Lukasz Grzegorz Maciak
+
+% this is a template I use for my exam papers
+
+\documentclass[a4paper,10pt]{article}
+
+\setlength{\textheight}{10in}
+\setlength{\textwidth}{6.5in}
+\setlength{\topmargin}{-0.125in}
+\setlength{\oddsidemargin}{-.2in}
+\setlength{\evensidemargin}{-.2in}
+\setlength{\headsep}{0.2in}
+\setlength{\footskip}{0pt}
+
+%\usepackage{fontspec}
+\usepackage{amsmath}
+\usepackage{unicode-math}
+%\setmathfont{texgyrepagella-math.otf}
+%\setmathfont{latinmodern-math.otf}
+%\setmathfont{xits-math.otf}
+%\setmathfont{Asana-Math.otf}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+%\usepackage{amssymb}
+%\usepackage{bm}
+%\usepackage{graphicx}
+%\usepackage{stmaryrd}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks   = true, %Colours links instead of ugly boxes
+	urlcolor     = blue, %Colour for external hyperlinks
+	linkcolor    = red, %Colour of internal links
+	citecolor   = red %Colour of citations
+}
+\usepackage{graphicx}
+\usepackage{listings}
+
+\pagestyle{fancy}
+%\renewcommand{\footrulewidth}{0.4pt}
+
+\lhead{\textbf{Name:} \rule{5.5cm}{0.5pt}}
+%\chead{M.Number: \rule{2cm}{0.5pt}}
+\chead{\textbf{Homework 1}}
+\rhead{\textbf{Fundamentals of CS \& Programming}}
+\fancyfoot{}
+%\newcommand{\bigbrk}{\vspace*{2in}}
+%\newcommand{\smallbrk}{\vspace*{.3in}}
+
+\begin{document}
+
+
+\begin{enumerate}
+
+  % ------------------------ Question 1 ------------------------
+  \item Computers follow instructions exactly as written. Write an algorithm for driving between two destinations. Write it as you would instruct a person to drive between two destinations. As computers are quite literal in their executions of algorithms, imagine a situation in which the person would follow your algorithm exactly as written. What could go wrong in that case? Give a couple of examples of things going wrong if your algorithm is taken literally.
+
+\newpage
+\mbox{} 
+
+\newpage
+\mbox{} 
+
+  % ------------------------ Question 2 ------------------------
+  \item Square root algorithm revisited, a.k.a.\ Heron’s method. Let us revisit the algorithm for computing the square root of a number $x$:
+
+  \begin{enumerate}
+    \item Start with a guess $g$ smaller than $x$.
+    \item If $g \cdot g$ is close to $x$, stop and say that $g$ is the answer.
+    \item Otherwise create a new guess by computing some function $f(g, x)$.
+    \item Using this new guess (we call it again $g$), repeat the process until $g \cdot g$ is close enough to $x$.
+  \end{enumerate}
+
+  Note that by introducing the function $f(g, x)$ we created a generic algorithm (or a family of algorithms), which we can easily adjust by simply exchanging the function $f$ that we use.
+
+  For this homework task, we will define:
+  \[
+    f(g, x) = \frac{1}{2} \left( g + \frac{x}{g} \right).
+  \]
+
+  Your tasks are:
+  \begin{enumerate}
+    \item Use $x = 16$ and an arbitrary $g$ smaller than $16$ as the starting guess. Find an approximate solution using your pocket calculator and the error tolerance of $0.5$ (i.e., you accept the result if $|g^2 - x| < 0.5$). Write down your calculation steps.
+
+    \item Use the same error tolerance to find an approximate solution for $x = 49$. Again, write down all of your computation steps.
+
+    \item How many steps did you need for the first and how many for the second case? Do you think that this algorithm is more efficient than the exhaustive enumeration algorithm from the lecture? Explain your answer.
+
+    \item Is Heron’s method more efficient than your improved algorithm from the lecture? Explain your answer.
+  \end{enumerate}
+
+\newpage
+\mbox{} 
+
+\newpage
+\mbox{} 
+
+  % ------------------------ Question 3 ------------------------
+  \item Square root algorithm revisited again :). Heron’s method is an instance of a more general approach to finding real roots of functions or, in this case, finding real roots of polynomials.
+
+  A polynomial with one variable $g$ is either zero or a sum of one or more nonzero terms consisting of a scalar coefficient multiplied with the variable $g$ raised to a nonnegative integer exponent called the degree of that term. The degree of the polynomial is the largest degree of its constituent terms. For example, the polynomial $g^3 + 2g^2 - 3g + 1$ has degree three, whereas the polynomials $5g^2$ and $7$ have degrees two and zero (the latter can be written as $7g^0$), respectively.
+
+  Let us now see how we can use polynomials for computing the square roots. Let $p(g)$ be the value of the polynomial $p$ evaluated at a specific $g$. A root $r$ of the polynomial $p$ is the solution to the equation $p(r) = 0$. For instance, to find the square root of a number $x$ we could use the polynomial $p(g) = g^2 - x$ and find $r$ such that $p(r) = r^2 - x = 0$.
+
+  The Newton’s (named after Sir Isaac Newton) method is a generalization of Heron’s method, which redefines the update function $f$. For the case of the root of polynomial $p$ the update function is:
+  \[
+    f(g) = g - \frac{p(g)}{p'(g)},
+  \]
+  where $p'(g)$ is the first derivative of $p$ evaluated at $g$.
+
+  Your tasks are:
+  \begin{enumerate}
+    \item Convince yourself that Heron’s method is a special case of Newton’s method for $p(g) = g^2 - x$.
+    \item Derive $f(g)$ for computing an approximate solution to the cube root of a number $x$.
+    \item Using your solution for $f(g)$ from the previous subtask and our general algorithm for finding the square root from the previous task (i.e., the steps 1--4), compute an approximate solution to the cube root of $27$. Use the error tolerance of $0.5$. Write down the computation steps.
+  \end{enumerate}
+
+  \textit{Hint:} You will need to compute $p'(g)$, i.e., the first derivative of the polynomial $p(g)$. Computing derivatives of polynomials is straightforward: for each term in the polynomial you multiply the coefficient of that term with its exponent. This product becomes the coefficient of the term derivative. You also have to decrease the exponent of the original term by one. Note that if you have a term of degree $0$, i.e., a constant, then its derivative is $0$. Finally, you sum all the term derivatives using the signs as in the original polynomial.
+
+  Example 1:
+  \[
+    p(g) = g^3 + 2g^2 - 3g + 1, \quad p'(g) = 3g^2 + 4g - 3.
+  \]
+
+  Example 2:
+  \[
+    p(g) = 5g^2, \quad p'(g) = 10g.
+  \]
+
+\end{enumerate}
+
+\newpage
+\mbox{} 
+
+\newpage
+\mbox{} 
+\end{document}
+
+
+
+
