@@ -1,0 +1,15 @@
+With a loop, write the code to find the smallest value in the 2d array
+With a loop, write the code to find the largest value in the 2d array
+With a loop, write the code to I serve a value into the 2d array so that the 2d array remains from smallest to largest
+With a loop, delete a value in the 2d array when give it's index
+With a loop, reverse the order of the 2d array and sub items
+With a loop, sum all values
+With a loop, sum all odd numbers
+With a loop, sum all even numbers
+With a loop, find all values smaller than a given threshold (i.e. 5)
+With a loop, find all values larger than a given threshold
+With a loop, minus every odd number and add every even number for a total.
+With a loop, print a string for each number in the 2d array with an equivalent length of the value in the 2d array.
+With a loop, count the number of items in the 2d array
+With a loop, calculate the average of the 2d array.
+Write a program that converts all strings in a list to uppercase using a loop.

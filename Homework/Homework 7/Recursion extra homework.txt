@@ -1,0 +1,43 @@
+1   Factorial Calculation
+    Compute the factorial of a number using recursion.
+
+2   Fibonacci Sequence
+    Return the nth Fibonacci number recursively.
+
+3   Sum of a List
+    Calculate the sum of all elements in a list using recursion.
+
+4   Count Occurrences in a List
+    Count how many times a value appears in a list recursively.
+
+5   Reverse a String
+    Recursively reverse a given string.
+
+6   Palindrome Checker
+    Check if a string is a palindrome using recursion.
+
+7   Power Function
+    Compute a^b recursively.
+
+8   Greatest Common Divisor (GCD)
+    Find the GCD of two numbers using Euclid’s algorithm recursively.
+
+9   Find Max in a List
+    Recursively find the largest number in a list.
+
+10  Sum of Digits
+    Add all digits of a number recursively.
+
+11  List Flattening
+    Flatten a nested list structure recursively.
+
+12  String Permutations
+    Generate all permutations of a string recursively.
+
+Optional
+
+1   Sudoku Solver
+    Build a basic recursive Sudoku solver using backtracking.
+
+2   Directory Traversal
+    Recursively list all files and folders in a directory.

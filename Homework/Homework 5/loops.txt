@@ -1,0 +1,15 @@
+With a for loop, write the code to find the smallest value in the array
+With a for loop, write the code to find the largest value in the array
+With a for loop, write the code to I serve a value into the array so that the array remains from smallest to largest
+With a for loop, delete a value in the array when give it's index
+With a for loop, reverse the order of the array
+With a for loop, sum all values
+With a for loop, sum all odd numbers
+With a for loop, sum all even numbers
+With a for loop, find all values smaller than a given threshold (i.e. 5)
+With a for loop, find all values larger than a given threshold
+With a for loop, minus every odd number and add every even number for a total.
+With a for loop, print a string for each number in the array with an equivalent length of the value in the array.
+With a for loop, count the number of items in the array
+With a for loop, calculate the average of the array.
+Write a program that converts all strings in a list to uppercase using a for loop.

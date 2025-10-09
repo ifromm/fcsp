@@ -1,0 +1,106 @@
+% (c) 2005 Lukasz Grzegorz Maciak
+
+% this is a template I use for my exam papers
+
+\documentclass[a4paper,10pt]{article}
+
+\setlength{\textheight}{10in}
+\setlength{\textwidth}{6.5in}
+\setlength{\topmargin}{-0.125in}
+\setlength{\oddsidemargin}{-.2in}
+\setlength{\evensidemargin}{-.2in}
+\setlength{\headsep}{0.2in}
+\setlength{\footskip}{0pt}
+
+%\usepackage{fontspec}
+\usepackage{amsmath}
+%\usepackage{unicode-math}
+%\setmathfont{texgyrepagella-math.otf}
+%\setmathfont{latinmodern-math.otf}
+%\setmathfont{xits-math.otf}
+%\setmathfont{Asana-Math.otf}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+%\usepackage{amssymb}
+%\usepackage{bm}
+%\usepackage{graphicx}
+%\usepackage{stmaryrd}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks   = true, %Colours links instead of ugly boxes
+	urlcolor     = blue, %Colour for external hyperlinks
+	linkcolor    = red, %Colour of internal links
+	citecolor   = red %Colour of citations
+}
+\usepackage{graphicx}
+\usepackage{listings}
+
+\pagestyle{fancy}
+%\renewcommand{\footrulewidth}{0.4pt}
+
+\lhead{\textbf{Name:} \rule{5.5cm}{0.5pt}}
+%\chead{M.Number: \rule{2cm}{0.5pt}}
+\chead{\textbf{Homework 10}}
+\rhead{\textbf{Fundamentals of CS \& Programming}}
+\fancyfoot{}
+%\newcommand{\bigbrk}{\vspace*{2in}}
+%\newcommand{\smallbrk}{\vspace*{.3in}}
+
+\begin{document}
+
+\section*{1. Big-O Classification}
+
+Determine whether each of these functions is \( O(x^2) \):
+
+\begin{enumerate}[label=\arabic*)]
+    \item \( f(x) = 17x + 11 \)
+    \item \( f(x) = x^2 + 1000 \)
+    \item \( f(x) = x \log x \)
+    \item \( f(x) = \frac{x^4}{2} \)
+    \item \( f(x) = 2^x \)
+\end{enumerate}
+
+\newpage
+
+\section*{2. Big-O Proof}
+
+Show that
+\[
+\frac{x^3 + 2x}{2x + 1}
+\]
+is \( O(x^2) \).
+
+\newpage
+
+\section*{3. Big-O Estimate for a Sum}
+
+Find a Big-O estimate for
+\[
+\sum_{j=1}^{n} j(j + 1).
+\]
+
+\newpage
+
+\section*{4. Big-O Estimates}
+
+Give a Big-O estimate for each of these functions:
+
+\begin{enumerate}[label=\arabic*)]
+    \item \( f(n) = (n^2 + 8)(n + 1) \)
+    \item \( f(n) = (n \log n + n^2)(n^3 + 1) \)
+    \item \( f(n) = (n! + 2^n)(n^3 + \log(n^2 + 1)) \)
+\end{enumerate}
+
+\newpage
+
+\section*{5. Bonus Task (extra 3 points)}
+
+Show that \( n! \) is not \( O(2^n) \).
+
+
+
+\end{document}
+
+
+
+
