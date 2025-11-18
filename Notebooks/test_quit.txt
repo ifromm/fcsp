@@ -1,0 +1,4 @@
+Hello Class!
+Today we look at file I/O.
+Quit
+This shouldn't be printed.
