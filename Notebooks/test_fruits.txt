@@ -1,0 +1,5 @@
+This is all the fruits i bought:
+I bought an Apple!
+I bought an Orange!
+I bought an Ananas!
+That makes 3.

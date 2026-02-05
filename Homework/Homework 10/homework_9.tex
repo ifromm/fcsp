@@ -1,0 +1,86 @@
+% (c) 2005 Lukasz Grzegorz Maciak
+
+% this is a template I use for my exam papers
+
+\documentclass[a4paper,10pt]{article}
+
+\setlength{\textheight}{10in}
+\setlength{\textwidth}{6.5in}
+\setlength{\topmargin}{-0.125in}
+\setlength{\oddsidemargin}{-.2in}
+\setlength{\evensidemargin}{-.2in}
+\setlength{\headsep}{0.2in}
+\setlength{\footskip}{0pt}
+
+%\usepackage{fontspec}
+\usepackage{amsmath}
+%\usepackage{unicode-math}
+%\setmathfont{texgyrepagella-math.otf}
+%\setmathfont{latinmodern-math.otf}
+%\setmathfont{xits-math.otf}
+%\setmathfont{Asana-Math.otf}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+%\usepackage{amssymb}
+%\usepackage{bm}
+%\usepackage{graphicx}
+%\usepackage{stmaryrd}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks   = true, %Colours links instead of ugly boxes
+	urlcolor     = blue, %Colour for external hyperlinks
+	linkcolor    = red, %Colour of internal links
+	citecolor   = red %Colour of citations
+}
+\usepackage{graphicx}
+\usepackage{listings}
+
+\pagestyle{fancy}
+%\renewcommand{\footrulewidth}{0.4pt}
+
+\lhead{\textbf{Name:} \rule{5.5cm}{0.5pt}}
+%\chead{M.Number: \rule{2cm}{0.5pt}}
+\chead{\textbf{Homework 9}}
+\rhead{\textbf{Fundamentals of CS \& Programming}}
+\fancyfoot{}
+%\newcommand{\bigbrk}{\vspace*{2in}}
+%\newcommand{\smallbrk}{\vspace*{.3in}}
+
+\begin{document}
+
+\section*{Running times of loops}
+
+Write a small Python script to measure the running time of loops. First, define a number \( n \).  
+Before each loop define a counter variable and set it to zero. In each step of the loop increment the counter by 1.  
+After the loop has finished, print the counter. Implement the following loops:
+
+\begin{enumerate}[label=\arabic*)]
+    \item \textbf{Loop A.} Write a \texttt{while} loop that starts with the loop variable being equal to \( n \) and runs until the loop variable is larger than 0. Within the loop integer divide the loop variable by two.
+    
+    \item \textbf{Loop B.} Write a single \texttt{for} loop from 0 to \( n - 1 \).
+    
+    \item \textbf{Loop C.} Write a nested loop with Loop B as the outer loop and Loop A as the inner loop.
+    
+    \item \textbf{Loop D.} Write a nested loop with Loop B as the outer loop and Loop B as the inner loop, i.e., a nested loop with two \texttt{for} loops.
+    
+    \item \textbf{Loop E.} Write a nested loop with Loop D as the outer loop and Loop A as the inner loop, i.e., Loop A is enclosed in two \texttt{for} loops.
+    
+    \item \textbf{Loop F.} Write a nested loop with three \texttt{for} loops.
+\end{enumerate}
+
+\bigskip
+\noindent
+\textbf{Instructions:}  
+In your code, write comments after printing the results and discuss the running times you have obtained.
+
+\newpage
+\mbox{} 
+
+\newpage
+\mbox{} 
+
+\end{document}
+
+
+
+
